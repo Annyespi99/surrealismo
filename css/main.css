@@ -223,6 +223,11 @@ body{
     text-decoration: none;
 }
 
+.profile-btn a:hover{
+    color: black;
+    text-decoration: none;
+}
+
 
 
 .profile-btn:hover {
