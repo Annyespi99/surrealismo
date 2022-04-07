@@ -8,15 +8,19 @@
     --second-color:rgb(228, 200, 40);
     --third-color:rgb(71, 171, 165);
     --backgroundthird-color:rgba(71, 171, 164, 0.468);
+    --grey-color:rgb(52, 50, 50);
+    --beige2-color:rgba(50, 50, 52, 0.521);
+    
 }
 
 *{
     margin: 0;
-    padding: 0;
+    
 
 }
 
 body{
+
     font-family: 'Inconsolata', sans-serif;
     background-image: url(../img/HD-wallpaper-starry-sky-stars-black.jpg);
 
@@ -65,13 +69,14 @@ body{
     50%{margin-left: -200%;}
     70%{margin-left: -200%;}
 
+
 }
 
 /*Info*/
 
 .profile-info{
     width: 95%;
-    
+
 }
 
 .profile-info h1 {
@@ -182,6 +187,181 @@ body{
 
 
 
+
+/*info-profile*/
+.profile{
+    text-align: center;
+}
+.profile h1{
+    color: var(--third-color);
+    font-size: 60px;
+    margin: 0;
+    text-align: center;
+}
+.profile-info p{
+    font-size: 40px;
+    text-align: center;
+    margin: 0 auto;
+    text-align: justify;
+    
+}
+
+.profile-btn{
+    background: linear-gradient(
+        var(--beige-color),
+        var(--grey-color));
+    border-radius: 50px;
+    border: none;
+    font-size: 30px;
+    padding: 20px;
+    cursor: pointer;
+    
+
+}
+.profile-btn a{
+    color: black;
+    text-decoration: none;
+}
+
+
+
+.profile-btn:hover {
+    background: linear-gradient(
+        var(--),
+        var(--beige-color)); 
+    transition: all 1s ease 1s;
+}
+
+
+
+/*Galery*/
+.galery{
+    width: 300px;
+    margin: auto;
+    overflow: hidden;
+    height: 500px;
+    margin-top: 20px;
+    border-radius: 100px;
+    
+}
+
+.galery ul{
+    display: flex;
+    padding: 0;
+    width: 500%;
+    animation: cambiover 15s infinite;
+    animation-direction:alternate ;
+    
+    
+}
+.galery li{
+    width: 90%;
+    list-style: none;
+
+
+}
+
+.galery img{
+    width: 100%;
+    
+}
+
+
+
+@keyframes cambiover{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    55%{margin-left: -200%;}
+    65%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    85%{margin-left: -300%;}
+
+    95%{margin-left: -400%;}
+    105%{margin-left: -400%;}
+
+}
+
+/*Técnicas*/
+.contenepadre{
+    display: flex;
+    flex-direction: row;
+}
+.contenedor{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contenedor figure{
+    position: relative;
+    height: 250px;
+    width: 350px;
+    overflow: hidden;
+    border-radius:50px;
+    box-shadow: 10px 10px 10px var(--beige-color);
+    cursor :pointer;
+
+}
+
+.contenedor figure img{
+    width: 100%;
+    height: 100%;
+    transition:  all 500 ms ease-out;
+}
+
+.contenedor figure .capa{
+    position:absolute ;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--beige2-color);
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+
+.contenedor figure:hover > .capa{
+    opacity: 1;
+    visibility: visible;
+}
+
+.contenedor figure:hover > .capa h3{
+    margin-top: 70px;
+    margin-bottom: 15px;
+}
+
+
+.contenedor figure .capa h3{
+    color: var(--beige-color);
+    font-weight: 400;
+    transition:all 500ms ease-out ;
+    margin-bottom: 120px;
+    margin-top: 30px;
+
+
+}
+.contenedor figure > .capa p{
+    margin: auto;
+    line-height: 1.5;
+    text-align: justify;
+    color: var(--beige-color);
+    max-width: 220px;
+    width: 100%;
+}
+
+
+
+
+
+
 @media screen and (max-width:1200px) {
     .container__cards{
         position: relative;
@@ -191,8 +371,11 @@ body{
         margin-top: 100px;
         padding-bottom:100px ;
     }
+
+    .contenepadre{
+        flex-direction: column;
+    }
     
 }
-
 
 
