@@ -23,6 +23,74 @@ body{
 }
 
 
+
+
+/*Banner*/
+
+
+.slider{
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+    height: 500px;
+    margin-top: 20px;
+}
+
+.slider ul{
+    display: flex;
+    padding: 0;
+    width: 300%;
+
+    animation: cambiover 15s infinite;
+    animation-direction:alternate ;
+    animation-timing-function: ease-in-out;
+}
+.slider li{
+    width: 100%;
+    list-style: none;
+
+}
+
+.slider img{
+    width: 100%;
+}
+
+@keyframes cambiover{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+}
+
+/*Info*/
+
+.profile-info{
+    width: 95%;
+    
+}
+
+.profile-info h1 {
+    font-family:'Staatliches', sans-serif;
+    color: var(--beige-color);
+    padding: 20px;
+
+}
+.profile-details{
+    padding: 20px;
+    color: var(--beige-color);
+    text-align: justify;
+}
+
+
+
+
+
+
 /*Cards Artist*/
 
 .container__cards{
@@ -112,46 +180,6 @@ body{
     font-weight: 500;
 }
 
-/*Banner*/
-
-
-.slider{
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
-    height: 500px;
-}
-
-.slider ul{
-    display: flex;
-    padding: 0;
-    width: 300%;
-
-    animation: cambiover 15s infinite;
-    animation-direction:alternate ;
-    animation-timing-function: ease-in-out;
-}
-.slider li{
-    width: 100%;
-    list-style: none;
-
-}
-
-.slider img{
-    width: 100%;
-}
-
-@keyframes cambiover{
-    0%{margin-left: 0;}
-    20%{margin-left: 0;}
-
-    25%{margin-left: -100%;}
-    45%{margin-left: -100%;}
-
-    50%{margin-left: -200%;}
-    70%{margin-left: -200%;}
-
-}
 
 
 @media screen and (max-width:1200px) {
@@ -165,7 +193,6 @@ body{
     }
     
 }
-
 
 
 

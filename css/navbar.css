@@ -35,6 +35,13 @@
     margin-left:20px;
 
 }
+.logo img:hover{
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 30px #ffffff;
+    
+}
+
+
+
 
 .topnav a {
     text-decoration: none;
@@ -43,6 +50,9 @@
     font-size: 30px;
 }
 
+.topnav a:hover{
+    text-shadow: 0 0 2px var(--second-color), 0 0 3px var(--second-color), 0 0 5px var(--second-color);
+}
 /* Menú */
 
 
@@ -58,6 +68,10 @@
     font-weight: bold;
     font-size: 20px;
     padding: 0 15px;  /*0(Arriba y abajo)  15px(derecha e izquierda)*/
+}
+.menu a:hover{
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 30px #ffffff;
+    
 }
 
 
@@ -97,10 +111,14 @@
 }
 
 
+
+
 .menu a{
     line-height: 100px;
     
 }
+
+
 
 .open-menu,
 .close-menu{
