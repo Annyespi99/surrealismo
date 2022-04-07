@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+
+
+:root{
+    --beige-color:beige;
+    --second-color:rgb(228, 200, 40);
+    --third-color:rgb(71, 171, 165);
+    --backgroundthird-color:rgba(71, 171, 164, 0.468);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    font-family: 'Inconsolata', sans-serif;
+    background-image: url(../img/HD-wallpaper-starry-sky-stars-black.jpg);
+
+}
+
+
+/*Cards Artist*/
+
+.container__cards{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify;
+    
+
+}
+
+.card{
+    width: 350px;
+    margin: 10px;
+    padding: 20px;
+    box-shadow:5px 5px 10px rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.5);
+    border-left:1px solid rgba(255, 255, 255, 0.5);
+    transition: all 300ms;
+
+}
+
+.card:hover {
+    transform: translateY(-10px);
+
+}
+
+.card:hover .cover__card img{
+    transform: scale(1.1);
+
+}
+
+.cover__card{
+    width: 100%;
+    height: 180px;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: all 300ms;
+
+}
+
+.cover__card img{
+    width: 110%;
+
+}
+
+.card h2{
+    font-size: 20px;
+    font-weight:400;
+    margin-top: 20px;
+    color: beige;
+
+}
+
+.card p{
+    margin: top 20px;
+    font-size: 14px ;
+    font-weight: 300;
+    color: beige;
+    letter-spacing: 0.4px;
+    
+}
+
+.card hr{
+    margin-top: 30px;
+    border: none;
+    height: 0.1px;
+    background: beige;
+}
+
+.footer__card{
+    margin-top: 10px;
+    display: flex;
+    color: beige;
+    justify-content: space-between;
+}
+
+.footer__card{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/*Banner*/
+
+
+.slider{
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    height: 500px;
+}
+
+.slider ul{
+    display: flex;
+    padding: 0;
+    width: 300%;
+
+    animation: cambiover 15s infinite;
+    animation-direction:alternate ;
+    animation-timing-function: ease-in-out;
+}
+.slider li{
+    width: 100%;
+    list-style: none;
+
+}
+
+.slider img{
+    width: 100%;
+}
+
+@keyframes cambiover{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+}
+
+
+@media screen and (max-width:1200px) {
+    .container__cards{
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        margin-top: 100px;
+        padding-bottom:100px ;
+    }
+    
+}
+
+
+
+

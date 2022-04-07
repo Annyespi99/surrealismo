@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+:root{
+    --beige-color:rgb(255, 255, 255);
+    --second-color:rgb(228, 200, 40);
+    --third-color:rgb(71, 171, 165);
+    --backgroundthird-color:rgba(245, 245, 220, 0.208);
+}
+
+.topheader{
+    box-shadow: 0 2px 10px var(--beige-color);/*eje x , eje y ,difuminado*/
+    /*position: fixed; /*Para fijar la barra de navegación cuando se dé scroll*/
+    
+    
+
+}
+
+.topnav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1300px;
+    margin: 0 auto;/*  Deacuerdo a las manesillas de reloj 0(arriba y abajo),(derecha e izquierda)*/
+}
+
+/* Logo */
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    border-radius: 40%;
+    margin-left:20px;
+
+}
+
+.topnav a {
+    text-decoration: none;
+    color: var(--second-color);
+    font-family: 'Staatliches', sans-serif;
+    font-size: 30px;
+}
+
+/* Menú */
+
+
+.menu{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu a {
+    font-family: 'Inconsolata', sans-serif;
+    color: var(--beige-color);
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0 15px;  /*0(Arriba y abajo)  15px(derecha e izquierda)*/
+}
+
+
+.menu a{
+    line-height: 90px;/*Centrar los elementos de forma horizontal en vez del margin*/
+    
+
+}
+.open-menu,
+.close-menu{
+    display: none;
+}
+
+@media (max-width: 950px){
+    
+
+/* Menú */
+
+
+.menu{
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-image: url(../img/HD-wallpaper-starry-sky-stars-black.jpg);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    color: black;
+    overflow-y: auto;/*Cuando el movil es muy pequeño y el menu aparece grande, es para poder dar scroll */
+    opacity: 0;
+    transition:  0.5s;
+}
+.menu li {
+    
+    padding: 0 ;  /*0(Arriba y abajo)  15px(derecha e izquierda)*/
+}
+
+
+.menu a{
+    line-height: 100px;
+    
+}
+
+.open-menu,
+.close-menu{
+    display: block;
+}
+
+
+
+.open-menu{
+    height: 40px;
+    width: 70px;
+    background: none;
+    border: none;
+    color: var(--beige-color);
+    font-size: 40px;
+
+    
+}
+.close-menu{
+    align-self: flex-end;
+    background: none;
+    cursor: pointer;
+    width: 50px;
+    height: 60px;
+    color: var(--beige-color);
+    border: none;
+    font-size: 50px;
+    padding: 15px 2px;
+    
+
+}
+
+.menu_opened{
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+}
